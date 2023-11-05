@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container-fluid" th:fragment="form_menu">
+    <p>Crear un Menú</p>
+    <form th:action="@{/index}" method="post" th:object="${menu}">
+      <div class="form-group">
+        <input type="text" placeholder="Nombre:" class="form-control" th:field="*{nombre_menu}"  />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">Crear</button>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
